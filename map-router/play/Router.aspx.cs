@@ -26,7 +26,13 @@ namespace map_router.src
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            init_algorithms_dictonary();
+            show_points_on_webpage();
+        }
+
+        private void show_points_on_webpage()
+        {
+            points_grid.DataSource = list_of_points;
+            points_grid.DataBind();
         }
 
         private Tuple<decimal, decimal> get_xy_as_tuple()
@@ -71,13 +77,22 @@ namespace map_router.src
         {
             Tuple <decimal, decimal> point = get_xy_as_tuple();
             list_of_points.Add(point);
+            Response.Redirect(Request.Url.ToString());
+        }
+
+        protected void clear_coordinates(object sender, EventArgs e)
+        {
+            list_of_points.Clear();
+            Response.Redirect(Request.Url.ToString());
         }
 
         protected void generate_route(object sender, EventArgs e)
         {
+            init_algorithms_dictonary();
             string algorithm = get_algorithm();
             List <Tuple <decimal, decimal>> path_in_order = get_route_from_algorithm(algorithm);
             Console.WriteLine(path_in_order);
+            Response.Redirect(Request.Url.ToString());
         }
     }
 }

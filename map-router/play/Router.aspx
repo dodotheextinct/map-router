@@ -16,6 +16,12 @@
             <asp:Button type="button" ID="add_coordinates_btn" Text="Add point" runat="server" OnClick="add_coordinates" />
         </div>
         <div>
+             <asp:GridView ID="points_grid" runat="server"></asp:GridView>
+        </div>
+        <div>
+            <asp:Button type="button" ID="clear_coordinates_btn" Text="Clear points" runat="server" OnClick="clear_coordinates" />
+        </div>
+        <div>
             <asp:DropDownList ID="algorithm_dropdown_list" AutoPostBack="True" runat="server">
                 <asp:ListItem Selected="True" Value="Alg1"> Alg1 </asp:ListItem>
                 <asp:ListItem Value="Alg2"> Alg2 </asp:ListItem>

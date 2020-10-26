@@ -42,6 +42,24 @@ namespace map_router.src
         protected global::System.Web.UI.WebControls.Button add_coordinates_btn;
 
         /// <summary>
+        /// points_grid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView points_grid;
+
+        /// <summary>
+        /// clear_coordinates_btn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button clear_coordinates_btn;
+
+        /// <summary>
         /// algorithm_dropdown_list control.
         /// </summary>
         /// <remarks>
